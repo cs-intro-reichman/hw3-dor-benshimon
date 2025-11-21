@@ -47,9 +47,9 @@ public class LoanCalc {
 		  iterationCounter = 0;
 		double balance = endBalance(loan, rate, n, payment);
 		while (balance>epsilon) {
-			 balance = endBalance(loan, rate, n, payment);
-			payment++;
 			iterationCounter++;
+			payment++;
+			 balance = endBalance(loan, rate, n, payment);
 		}
 			
 		
@@ -57,7 +57,7 @@ public class LoanCalc {
 		
 			
 		
-		return payment-1;
+		return payment;
     
     }
     // Uses bisection search to compute an approximation of the periodical payment 
